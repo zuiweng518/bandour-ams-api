@@ -38,7 +38,8 @@ public class IndexController {
         if(app!=null){
             list=roleService.findRoleOrgsByAccount(account);
             json=JSON.toJSONString(list);
-            json="{\"content\":\""+json+"\",\"error\":\"null\"}";
+            json="{\"content\":"+json+",\"error\":null}";
+            System.out.println(json);
         }else{
             json="{\"content\":\"\",\"error\":\"请检查app_code和app_secret\"}";
 
